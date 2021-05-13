@@ -27,8 +27,6 @@ module.exports = {
   },
   icon: "./src/icon.jpg",
   transformers: {
-    remark: {
-      plugins: ["remark-attr"],
-    },
+
   },
 };

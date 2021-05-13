@@ -26,5 +26,11 @@ module.exports = {
     BlogPost: "/blog/:title",
   },
   icon: "./src/icon.jpg",
+<<<<<<< HEAD
   transformers: {},
+=======
+  transformers: {
+
+  },
+>>>>>>> 97e8a4a87b45458aa4518112db24775981f8dbb0
 };

@@ -26,9 +26,5 @@ module.exports = {
     BlogPost: "/blog/:title",
   },
   icon: "./src/icon.jpg",
-  transformers: {
-    remark: {
-      plugins: ["remark-attr"],
-    },
-  },
+  transformers: {},
 };

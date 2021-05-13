@@ -69,7 +69,7 @@
           :key="projet.node.id"
         >
           <div class="card-body">
-            <g-image :src="require(projet.node.image)" />
+            <g-image :src="projet.node.image" />
             <g-link class="title" :to="projet.node.path">
               <h3 class="card-title">{{ projet.node.title }}</h3>
               <p class="card-text">{{ projet.node.description }}</p>

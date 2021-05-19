@@ -70,12 +70,12 @@
         >
           <div class="card-body">
             <g-image
-              v-if="projet.node.image != null"
-              :src="projet.node.image"
+              v-if="projet.node.fields.image != null"
+              :src="projet.node.fields.image"
             />
             <g-link class="title" :to="projet.node.path">
-              <h3 class="card-title">{{ projet.node.title }}</h3>
-              <p class="card-text">{{ projet.node.description }}</p>
+              <h3 class="card-title">{{ projet.node.fields.title }}</h3>
+              <p class="card-text">{{ projet.node.fields.description }}</p>
             </g-link>
           </div>
         </div>
@@ -267,11 +267,8 @@ query {
     edges {
       node {
         id
-        title
         path
-        description
-        content
-        image
+        fields{title description image}
       }
     }
   }

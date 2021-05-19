@@ -2,8 +2,11 @@
   <Layout>
     <div class="container blog-post">
       <article>
-        <h1 v-if="$page.blogPost">{{ $page.blogPost.title }}</h1>
-        <div v-if="$page.blogPost" v-html="$page.blogPost.content"></div>
+        <h1 v-if="$page.blogPost.fields">{{ $page.blogPost.fields.title }}</h1>
+        <div
+          v-if="$page.blogPost.fields"
+          v-html="$page.blogPost.fields.content"
+        ></div>
         <div id="disqus_thread"></div>
       </article>
     </div>
@@ -39,8 +42,10 @@ export default {};
 <page-query>
   query ($id: ID!) {
     blogPost(id: $id) {
-      title
+     fields{
+       title
       content
+      } 
     }
   }
 </page-query>

@@ -19,9 +19,17 @@ module.exports = {
       options: {
         path: "blog/**/*.md",
         typeName: "BlogPost",
+        remark: {
+          //Config options can be added here
+        },
       },
     },
   ],
+  transformers: {
+    remark: {
+      //Config options can be added here
+    },
+  },
   templates: {
     BlogPost: "/blog/:title",
   },

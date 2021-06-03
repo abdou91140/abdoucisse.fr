@@ -38,7 +38,7 @@
         </a>
       </div>
       <div>
-        <a class="nav-link" href="https://github.com/abdou91140">
+        <a class="nav-link" href="https://twitter.com/cissabdou7">
           <font-awesome :icon="['fab', 'twitter']" />
         </a>
       </div>

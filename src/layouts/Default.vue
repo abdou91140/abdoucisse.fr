@@ -31,7 +31,7 @@
       </div>
     </nav>
     <slot />
-    <article class="container-fluid row justify-content-center">
+    <article class="container-fluid row justify-content-center footer">
       <div>
         <a class="nav-link" href="https://github.com/abdou91140">
           <font-awesome :icon="['fab', 'github']" />
@@ -84,7 +84,6 @@ body {
 .navbar-brand {
   font-size: inherit !important;
   padding-bottom: 55px;
-  margin-bottom: 38px;
 }
 .container {
   padding-top: 20px;
@@ -97,6 +96,7 @@ body {
   text-decoration: none !important;
 }
 .footer {
-  position: sticky;
+  position: relative;
+  padding-top: 28vmin;
 }
 </style>

@@ -61,14 +61,15 @@
           :key="projet.node.id"
         >
           <div class="card-body">
-            <!--    <g-image
-              v-if="projet.node.fields.image != null"
-              :src="projet.node.fields.image"
-            /> -->
+            <div class="card-img-top">
+              <g-image
+                v-if="projet.node.fields.image != null"
+                :src="projet.node.fields.image"
+              />
+            </div>
             <g-link class="title" :to="projet.node.path">
               <h3 class="card-title">{{ projet.node.fields.title }}</h3>
-              <!--               <p class="card-text">{{ projet.node.fields.description }}</p>
- -->
+              <p class="card-text">{{ projet.node.fields.description }}</p>
             </g-link>
           </div>
         </div>

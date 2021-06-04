@@ -1,6 +1,6 @@
 ---
 title: Projet de Formation
-description: Dans le cadre de ma formation « Développeur d’application frontend » avec OpenClassrooms, j’ai réalisé un jeu de plateau tour par tour en JavaScript.
+description: J’ai réalisé un jeu de plateau tour par tour en JavaScript.
 path : https://github.com/abdou91140/P6
-image: src/banner.jpg
+image: https://images.unsplash.com/photo-1566577134770-3d85bb3a9cc4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&&h=200&w=200&q=80
 ---

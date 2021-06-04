@@ -38,9 +38,10 @@ export default {};
 <page-query>
   query ($id: ID!) {
     blogPost(id: $id) {
+      fields{
        title
        content
-      
+      }
     }
   }
 </page-query>

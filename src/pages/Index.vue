@@ -75,30 +75,29 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="container ">
-        <h2 class="Titre">Les Languages</h2>
-        <hr class="my-4" />
-        <div class="row p-5">
-          <h3 class="mx-auto ">PHP</h3>
-          <h3 class="mx-auto ">JavaScript</h3>
-          <h3 class="mx-auto ">HTML</h3>
-          <h3 class="mx-auto ">CSS</h3>
-          <h3 class="mx-auto ">Mysql</h3>
+    <div class="container ">
+      <h2 class="Titre">Les Languages & Frameworks</h2>
+      <hr class="my-4" />
+      <div class="row">
+        <div class="col-sm-6 p-5">
+          <h3>PHP</h3>
+          <h3>Javascript</h3>
+          <h3>HTML5</h3>
+          <h3>CSS3</h3>
+          <h3>Mysql</h3>
+          <h3>Graphql</h3>
+          <h3>Anglais</h3>
+          <h3>Français</h3>
         </div>
-      </div>
-      <div class="container">
-        <h2 class="Titre">Les frameworks</h2>
-        <hr class="my-4" />
-        <div class="row p-5">
-          <h3 class="mx-auto ">React.js</h3>
-          <h3 class="mx-auto ">Vue.js</h3>
-          <h3 class="mx-auto ">Symfony</h3>
-          <h3 class="mx-auto ">Jquery</h3>
-          <h3 class="mx-auto ">Gridsome</h3>
-          <h3 class="mx-auto ">Next.js</h3>
-          <h3 class="mx-auto ">Bootstrap</h3>
-          <h3 class="mx-auto ">Tailwind</h3>
+        <div class="col-sm-6 p-5">
+          <h3>React.js</h3>
+          <h3>Vue.js</h3>
+          <h3>Symfony</h3>
+          <h3>Jquery</h3>
+          <h3>Gridsome</h3>
+          <h3>Next.js</h3>
+          <h3>Bootstrap</h3>
+          <h3>Tailwind</h3>
         </div>
       </div>
     </div>
@@ -163,18 +162,21 @@ query {
   transition: transform 0.5s, filter 1.3s ease-in-out;
   filter: grayscale(100%);
 }
-.card:hover,
-h3:hover {
+.card:hover {
   filter: grayscale(0);
   transform: scale(1.1);
 }
-.technos > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  transform: scale(0.8);
+.row {
+  text-align: center;
 }
-
+.row > div > h3:hover {
+  transform: scale(1.1);
+  color: rgba(255, 57, 57, 0.733);
+  transition: transform 0.3s, filter 1s ease-in-out;
+}
+img {
+  max-width: -webkit-fill-available;
+}
 @media screen and (max-width: 768px) {
   .Titre {
     padding: 5vmin;
@@ -200,13 +202,7 @@ h3:hover {
     text-align: center;
     font-size: smaller;
   }
-  .technos > div {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  svg {
-    transform: scale(0.4);
-  }
+
   #job {
     text-align: end;
     font-size: 26px;

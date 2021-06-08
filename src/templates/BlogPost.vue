@@ -1,52 +1,48 @@
 <template>
   <Layout>
-    <div class="container blog-post">
-      <article>
-        <h1 v-if="$page.blogPost.fields">{{ $page.blogPost.fields.title }}</h1>
-        <div
-          v-if="$page.blogPost.fields"
-          v-html="$page.blogPost.fields.content"
-        ></div>
-        <div id="disqus_thread"></div>
-      </article>
-    </div>
+    <main>
+      <div class="container blog-post">
+        <article>
+          <h1 v-if="$page.blogPost.fields">
+            {{ $page.blogPost.fields.title }}
+          </h1>
+          <small
+            >{{ $page.blogPost.timeToRead }}<span> min de lecture</span></small
+          >
+          <hr />
+          <div
+            v-if="$page.blogPost.fields"
+            v-html="$page.blogPost.content"
+          ></div>
+        </article>
+        <Disqus
+          shortname="portfolio-bmherqxhzx"
+          :identifier="$page.blogPost.fields.title"
+        />
+      </div>
+    </main>
   </Layout>
 </template>
 <script>
 export default {};
 </script>
-<script>
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-
-/* var disqus_config = function() {
-  this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() {
-  // DON'T EDIT BELOW THIS LINE
-  var d = document,
-    s = d.createElement("script");
-  s.src = "https://portfolio-bmherqxhzx.disqus.com/embed.js";
-  s.setAttribute("data-timestamp", +new Date());
-  (d.head || d.body).appendChild(s);
-})(); */
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <page-query>
   query ($id: ID!) {
-    blogPost(id: $id) {
+    blogPost(id: $id) { 
+       timeToRead(speed:230)
       fields{
        title
+      }   
        content
-      }
+         
     }
   }
 </page-query>
 <style>
 .blog-post {
   padding: 3em;
+}
+#disqus_thread {
+  margin: auto;
 }
 </style>

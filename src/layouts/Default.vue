@@ -11,7 +11,6 @@
         data-bs-toggle="collapse"
         data-bs-target="#navbarColor03"
         aria-controls="navbarColor03"
-        aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -70,8 +69,6 @@ body {
   padding: 0;
   line-height: 1.5;
   font-size: 17px !important;
-  display: flex;
-  flex-direction: column;
 }
 html,
 body {

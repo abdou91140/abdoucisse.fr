@@ -7,10 +7,15 @@
     "build": "gridsome build"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "bootstrap": "^5.0.0-beta3",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.23",
+    "html-to-text": "^7.1.1",
+    "jquery": "^3.6.0",
+    "lodash.words": "^4.2.0",
+    "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

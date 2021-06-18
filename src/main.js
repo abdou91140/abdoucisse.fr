@@ -3,7 +3,7 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import "./assets/bootstrap.min.css";
-import "bootstrap";
+import BootstrapVue from "bootstrap-vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -22,4 +22,5 @@ export default function(Vue, { router, head, isClient }) {
   Vue.component("Layout", DefaultLayout);
   Vue.component("font-awesome", FontAwesomeIcon);
   Vue.use(VueDisqus);
+  Vue.use(BootstrapVue);
 }

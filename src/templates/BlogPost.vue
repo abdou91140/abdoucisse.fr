@@ -3,21 +3,21 @@
     <main>
       <div class="container blog-post">
         <article>
-          <h1 v-if="$page.blogPost.fields">
-            {{ $page.blogPost.fields.title }}
+          <h1 v-if="$page.blogPost.title">
+            {{ $page.blogPost.title }}
           </h1>
           <small
             >{{ $page.blogPost.timeToRead }}<span> min de lecture</span></small
           >
           <hr />
           <div
-            v-if="$page.blogPost.fields"
+            v-if="$page.blogPost.content"
             v-html="$page.blogPost.content"
           ></div>
         </article>
         <Disqus
           shortname="portfolio-bmherqxhzx"
-          :identifier="$page.blogPost.fields.title"
+          :identifier="$page.blogPost.title"
         />
       </div>
     </main>
@@ -30,11 +30,8 @@ export default {};
   query ($id: ID!) {
     blogPost(id: $id) { 
        timeToRead(speed:230)
-      fields{
        title
-      }   
        content
-         
     }
   }
 </page-query>

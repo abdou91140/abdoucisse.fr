@@ -63,13 +63,13 @@
           <div class="card-body">
             <div class="card-img-top">
               <g-image
-                v-if="projet.node.fields.image != null"
-                :src="projet.node.fields.image"
+                v-if="projet.node.image != null"
+                :src="projet.node.image"
               />
             </div>
             <g-link class="title" :to="projet.node.path">
-              <h3 class="card-title">{{ projet.node.fields.title }}</h3>
-              <p class="card-text">{{ projet.node.fields.description }}</p>
+              <h3 class="card-title">{{ projet.node.title }}</h3>
+              <p class="card-text">{{ projet.node.description }}</p>
             </g-link>
           </div>
         </div>
@@ -111,7 +111,10 @@ query {
       node {
         id
         path
-        fields{title description image}
+        title
+        description
+        image
+        
       }
     }
   }

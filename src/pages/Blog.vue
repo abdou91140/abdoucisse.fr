@@ -5,7 +5,7 @@
     <ol class="list-group">
       <div   v-for="post in $page.allBlogPost.edges" :key="post.node.id">
       <li class="list-group-item "  >
-        <div class="badge  rounded-pill">{{ post.node.fields.date }}</div><g-link :to="post.node.path"><h4 class="d-flex align-item">{{ post.node.fields.title }}</h4></g-link><span>{{ post.node.fields.description }}</span>
+        <div class="badge  rounded-pill">{{ post.node.date }}</div><g-link :to="post.node.path"><h4 class="d-flex align-item">{{ post.node.title }}</h4></g-link><span>{{ post.node.description }}</span>
       </li>
       </div>
     </ol></div>
@@ -20,12 +20,9 @@
         node {
           id 
           path
-          fields{
-              title
-              description
-              date(format: "DD MMMM YYYY",locale:"fr")
-         } 
-
+          title
+          description
+          date(format: "DD MMMM YYYY",locale:"fr")
         }
       }
     }

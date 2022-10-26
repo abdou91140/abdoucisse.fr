@@ -12,6 +12,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@popperjs/core": "^2.9.2",
     "bootstrap-vue": "^2.21.2",
+    "core-js": "^2.6.12",
     "gridsome": "^0.7.23",
     "html-to-text": "^7.1.1",
     "jquery": "^3.6.0",
@@ -22,5 +23,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/abdou91140/abdoucisse.fr.git",
+  "author": "abcisse <abcisse@agencereference.com>",
+  "license": "MIT"
 }

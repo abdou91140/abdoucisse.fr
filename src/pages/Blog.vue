@@ -12,7 +12,6 @@
   </Layout>
 </template>
 
-</script>
 <page-query>
   query {
     allBlogPost {

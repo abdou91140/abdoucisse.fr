@@ -161,13 +161,14 @@ query {
   text-decoration: none;
 }
 
-.card {
-  transition: transform 0.5s, filter 1.3s ease-in-out;
+.card ,.header>div>img{
+  transition: transform 0.3s, filter 0.3s ease-in-out;
   filter: grayscale(100%);
 }
-.card:hover {
+.card:hover,.header>div>img:hover {
   filter: grayscale(0);
   transform: scale(1.1);
+  transition: transform 0.3s ;
 }
 .row {
   text-align: center;
@@ -175,7 +176,7 @@ query {
 .row > div > h3:hover {
   transform: scale(1.1);
   color: rgba(255, 57, 57, 0.733);
-  transition: transform 0.3s, filter 1s ease-in-out;
+  transition: transform 0.3s, filter 0.3s ease-in-out;
 }
 img {
   max-width: -webkit-fill-available;

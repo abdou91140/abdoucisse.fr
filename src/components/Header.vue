@@ -1,18 +1,20 @@
 <template>
-  <header class="header">
-    <b-navbar class="p-1" toggleable="md" type="light">
+  <header >
+    <div class="header">
+    <b-navbar class="p-1" toggleable="md" type="dark">
       <b-navbar-brand>
-        <g-link class="home" to="/">{{ $static.metadata.siteName }}</g-link>
+       <!-- <g-link class="home" to="/">{{ $static.metadata.siteName }}</g-link> --> 
       </b-navbar-brand>
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav class="ml-auto">
           <g-link class="nav-link" to="/">Acceuil</g-link>
+          <g-link class="nav-link" to="/projects">Projets</g-link>
           <g-link class="nav-link" to="/blog">Blog</g-link>
           <g-link class="nav-link" to="/contact">Contact</g-link>
         </b-navbar-nav>
       </b-collapse>
-    </b-navbar>
+    </b-navbar></div>
   </header>
 </template>
 
@@ -33,21 +35,18 @@ nav {
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  color: white;
 }
 
 .nav-link,
 .home {
   margin-left: 20px;
   text-decoration: none !important;
-}
-.home {
-  color: black;
 
-  font-size: larger;
 }
+
 .logo-image {
   width: 40px;
 }

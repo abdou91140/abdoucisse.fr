@@ -1,6 +1,9 @@
 <template>
   <Layout>
     <div class="container contact-form">
+      <div class="titles display-5">
+     Contact
+      </div>
       <form action="https://formspree.io/f/mgerojqg" method="POST">
         <div class="form-group">
           <div class="form-group">
@@ -23,9 +26,8 @@
               name="message"
             ></textarea>
           </div>
-          <!-- your other form fields go here -->
 
-          <button class="btn btn-lg btn-outline-primary" type="submit">
+          <button class="btn btn-lg btn-outline-info" type="submit">
             Envoie
           </button>
         </div>

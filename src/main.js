@@ -3,6 +3,8 @@
 
 import DefaultLayout from "~/layouts/Default.vue";
 import "./assets/bootstrap.min.css";
+import "./assets/bootstrap.css";
+
 import BootstrapVue from "bootstrap-vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { config, library } from "@fortawesome/fontawesome-svg-core";

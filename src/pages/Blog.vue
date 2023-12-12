@@ -1,14 +1,31 @@
 <template>
   <Layout>
-      <div class="container" id="BlogPost">
-    <h1>Blog Posts</h1>
-    <ol class="list-group">
-      <div   v-for="post in $page.allBlogPost.edges" :key="post.node.id">
-      <li class="list-group-item "  >
-        <div class="badge  rounded-pill">{{ post.node.date }}</div><g-link :to="post.node.path"><h4 class="d-flex align-item">{{ post.node.title }}</h4></g-link><span>{{ post.node.description }}</span>
-      </li>
+    <div class="container ">
+      <div class="titles display-5">
+     Blog Posts
       </div>
-    </ol></div>
+      <table class="table-light table-hover table">
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Sujet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="post in $page.allBlogPost.edges" :key="post.node.id" >
+          
+         <td>  {{ post.node.date }}
+            </td><td>
+    <g-link :to="post.node.path" class="link-blog">
+      <h4>{{ post.node.title }}</h4>
+    </g-link></td>
+   <td> {{ post.node.description }}
+  </td> 
+    </tr>
+    </tbody>
+    </table>
+    </div>
   </Layout>
 </template>
 
@@ -28,8 +45,10 @@
   }
 </page-query>
 <style>
-#BlogPost {
-    padding: 3em;
+.container .table{
+  border-radius:10px !important;;
 }
-
+.link-blog h4{
+  color: #fc346f;
+}
 </style>

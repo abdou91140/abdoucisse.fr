@@ -2,8 +2,9 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from "~/layouts/Default.vue";
-import "./assets/bootstrap.min.css";
 import "./assets/bootstrap.css";
+import "./assets/bootstrap.min.css";
+
 
 import BootstrapVue from "bootstrap-vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";

@@ -2,23 +2,16 @@
   <Layout>
     <main>
       <div class="container blog-post">
+        <div class="titles display-5" v-if="$page.blogPost.title">
+          {{ $page.blogPost.title }}
+        </div>
         <article>
-          <h1 v-if="$page.blogPost.title">
-            {{ $page.blogPost.title }}
-          </h1>
-          <small
-            >{{ $page.blogPost.timeToRead }}<span> min de lecture</span></small
-          >
+
+          <small>{{ $page.blogPost.timeToRead }}<span> min de lecture</span></small>
           <hr />
-          <div
-            v-if="$page.blogPost.content"
-            v-html="$page.blogPost.content"
-          ></div>
+          <div v-if="$page.blogPost.content" v-html="$page.blogPost.content"></div>
         </article>
-        <Disqus
-          shortname="portfolio-bmherqxhzx"
-          :identifier="$page.blogPost.title"
-        />
+        <Disqus shortname="portfolio-bmherqxhzx" :identifier="$page.blogPost.title" />
       </div>
     </main>
   </Layout>
@@ -37,8 +30,9 @@ export default {};
 </page-query>
 <style>
 .blog-post {
-  padding: 3em;
+  padding: 1em;
 }
+
 #disqus_thread {
   margin: auto;
 }

@@ -65,22 +65,13 @@ body {
 }
 
 .titles {
-  padding: 10%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   text-align: center;
   color: white;
 }
 
-/* .layout {
-  min-height: 100%;
-  flex: 1 0 auto;
--image: url('/Home.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation: lightningAnim 25s linear infinite;
-} */
 a {
   text-decoration: none !important;
 
@@ -95,8 +86,38 @@ a {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  overflow: hidden;
+  overflow: hidden
 }
+  /* Loading animation styles */
+.loading-container {
+    position: relative;
+    min-height: 100px;
+    /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #ff409a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+};
 @media screen and (max-width: 768px) {
   .container {
     margin: auto;

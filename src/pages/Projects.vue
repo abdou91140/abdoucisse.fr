@@ -3,19 +3,26 @@
     <Layout>
         <div class="container">
             <h1 class="titles display-5">Les projets sur GitHub</h1>
-            <div class="d-flex justify-content-center">
-                <div class="col-md-3 mb-3" v-for="(repo, index) in repositories" :key="repo.id">
-                    <div class="card border-secondary mb-3">
-                        <div class="card-header">{{ repo.name }}</div>
-                        <div class="card-body">
-                            <router-link :to="repo.html_url" class="text-light"><span>Description:</span>
-                                <p class="card-text"> {{ repo.description }}</p>
-                            </router-link>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-date">Dernier commit: {{ new
-                                Date(repo.lastCommit).toLocaleDateString('fr-FR')
-                            }}</small>
+
+            <div class="loading-container d-flex justify-content-center" v-if="loading">
+                <div class="loader"></div>
+                <p>Loading...</p>
+            </div>
+            <div v-if="!loading">
+                <div class="d-flex justify-content-center flex-wrap">
+                    <div class="col-md-3 mb-3" v-for="(repo, index) in repositories" :key="repo.id">
+                        <div class="card border-secondary mb-3">
+                            <div class="card-header">{{ repo.name }}</div>
+                            <div class="card-body">
+                                <router-link :to="repo.html_url" class="text-light"><span>Description:</span>
+                                    <p class="card-text"> {{ repo.description }}</p>
+                                </router-link>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-date">Dernier commit: {{ new
+                                    Date(repo.lastCommit).toLocaleDateString('fr-FR')
+                                }}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -30,7 +37,8 @@
 export default {
     data() {
         return {
-            repositories: []
+            repositories: [],
+            loading: true
         };
     },
     mounted() {
@@ -44,6 +52,7 @@ export default {
                 const data = await response.json();
                 this.repositories = data.slice(0, 4);
                 await this.fetchLastCommitDates();
+                this.loading = false;
             } catch (error) {
                 console.error('Error fetching repositories:', error);
             }
@@ -73,13 +82,16 @@ export default {
     border: none !important;
     border-radius: 2%;
 }
-.text-light > span{
+
+.text-light>span {
     color: white;
 }
-.card-header{
+
+.card-header {
     color: #ff409a;
-    font-size:25px;
+    font-size: 25px;
 }
+
 .card-text {
     color: rgba(0, 0, 0, 0.685);
 }
@@ -97,5 +109,36 @@ export default {
 .header>div>img:hover {
     transform: scale(1.1);
     transition: transform 0.3s;
+
 }
-</style>
+
+/* Loading animation styles */
+.loading-container {
+    position: relative;
+    min-height: 100px;
+    /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #ff409a;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}</style>

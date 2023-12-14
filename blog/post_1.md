@@ -1,5 +1,5 @@
 ---
-title: La menace fantôme
+title: Un nouvel espoir
 date: 2021-05-10
 description: Le début de ma reconversion et les premières désillusions.
 ---

@@ -10,6 +10,12 @@
           </div>
         </div>
       </div>
+      <div class="lead">Je suis un développeur avec quelques années d'expérience, après avoir changé de carrière. Je me suis tournée vers
+        le dev
+        fullstack, en particulier avec <span><strong>Php</strong></span> (Symfony) et <strong>Javascript</strong> (React.js,Vue.js). J'utilise aussi d'autres techno, alors
+        n'hésitez pas à m'envoyer un message ou un mail sur les pages dédiées. A bientôt !</div>
+    </div>
+    <div>
     </div>
   </Layout>
 </template>
@@ -19,9 +25,12 @@
 .title-home {
   display: flex;
   justify-content: center;
-  align-items: start;
-  height: 65vh;
-  padding-top: 10%;
+  align-items: end;
+  margin: 10% 0 5% 0;
+}
+.lead{
+  text-align:justify;
+  margin: 0 10% 0 10%;
 }
 
 hr {
@@ -51,13 +60,18 @@ img {
 
 
 @media screen and (max-width: 768px) {
-  .title {
-    padding: 5vmin;
+  .title-home {
+    padding-top: 5rem;
   }
 
-hr{
-  height: 2px;
-}
+  .display-3 {
+    font-size: 3.5rem;
+  }
+
+  hr {
+    height: 2px;
+  }
+
   .profil {
     max-width: 150px;
   }

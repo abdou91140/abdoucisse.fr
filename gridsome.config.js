@@ -33,5 +33,5 @@ module.exports = {
   templates: {
     BlogPost: "/blog/:title",
   },
-  icon: "./src/icon.jpg",
+  icon: "./src//assets/images/profil.jpg",
 };

@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody>
-  
+
             <tr v-for="post in $page.allBlogPost.edges" :key="post.node.id">
               <th scope="rowgroup"> {{ post.node.date }}
               </th>
@@ -49,14 +49,18 @@
   }
 </page-query>
 <style>
-.container, .table {
+.container,
+.table {
   background-color: transparent !important;
-  margin-bottom:inherit;
+  margin-bottom: inherit;
 }
 
 #table-border {
   border-radius: 10px;
   overflow: hidden;
+}
+:root {
+  --bs-table-color: #000000!important; /* Black color */
 }
 
 

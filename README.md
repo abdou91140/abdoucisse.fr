@@ -3,7 +3,7 @@
 Site contenant :
 - une présentation. 
 - un blog.
-- mes projets.
+- mes projets sur github.
 - un formulaire de contact.
 
 https://portefolio-abdoucisse.netlify.app/

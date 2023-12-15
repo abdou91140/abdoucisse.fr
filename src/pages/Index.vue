@@ -26,11 +26,11 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  margin: 10% 0 5% 0;
+  margin:5% 0 5% 0;
 }
 .lead{
   text-align:justify;
-  margin: 0 10% 0 10%;
+  margin: 0 10% 5% 10%;
 }
 
 hr {

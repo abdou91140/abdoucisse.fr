@@ -11,19 +11,24 @@
             <div v-if="!loading">
                 <div class="d-flex justify-content-center flex-wrap">
                     <div class="col-md-3 mb-3" v-for="(repo, index) in repositories" :key="repo.id">
-                        <div class="card border-secondary mb-3">
-                            <div class="card-header">{{ repo.name }}</div>
-                            <div class="card-body">
-                                <router-link :to="repo.html_url" class="text-light"><span>Description:</span>
+                        <g-link :to="repo.html_url">
+                            <div class="card border-secondary mb-3">
+
+                                <div class="card-header"> {{ repo.name }}
+                                </div>
+
+                                <div class="card-body">
+                                    <span>Description:</span>
                                     <p class="card-text"> {{ repo.description }}</p>
-                                </router-link>
+
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-date">Dernier commit: {{ new
+                                        Date(repo.lastCommit).toLocaleDateString('fr-FR')
+                                    }}</small>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <small class="text-date">Dernier commit: {{ new
-                                    Date(repo.lastCommit).toLocaleDateString('fr-FR')
-                                }}</small>
-                            </div>
-                        </div>
+                        </g-link>
                     </div>
                 </div>
             </div>
@@ -89,7 +94,7 @@ export default {
 
 .card-header {
     color: #ff409a;
-    font-size: 25px;
+    font-style: inherit;
 }
 
 .card-text {
@@ -111,34 +116,4 @@ export default {
     transition: transform 0.3s;
 
 }
-
-/* Loading animation styles */
-.loading-container {
-    position: relative;
-    min-height: 100px;
-    /* Adjust height as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader {
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-top: 4px solid #ff409a;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}</style>
+</style>

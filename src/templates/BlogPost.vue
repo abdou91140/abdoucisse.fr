@@ -32,6 +32,9 @@ export default {};
 .blog-post {
   padding: 1em;
 }
+p {
+text-align: justify;
+}
 
 #disqus_thread {
   margin: auto;

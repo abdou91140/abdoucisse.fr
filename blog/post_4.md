@@ -1,5 +1,5 @@
 ---
-title: L’Attaque des clones 
+title: La menace fantôme
 date: 2021-10-10
 description: Après un bootcamp, quoi ?
 

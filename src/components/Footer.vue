@@ -6,7 +6,7 @@
           </a>
         </div>
         <div>
-          <a class="nav-link" href="https://www.linkedin.com/in/cisse1982/">
+          <a class="nav-link" href="https://www.linkedin.com/in/abdoulaye-cissé/">
             <font-awesome :icon="['fab', 'linkedin']" />
           </a>
         </div>

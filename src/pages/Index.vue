@@ -25,7 +25,7 @@
 .title-home {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   margin:5% 0 5% 0;
 }
 .lead{
@@ -42,10 +42,6 @@ hr {
 
 
 
-.header {
-  display: flex;
-  justify-content: space-around;
-}
 
 
 .row>div>h3:hover {
@@ -55,7 +51,7 @@ hr {
 }
 
 img {
-  max-width: -webkit-fill-available;
+  max-width: 100%;
 }
 
 
@@ -72,8 +68,5 @@ img {
     height: 2px;
   }
 
-  .profil {
-    max-width: 150px;
-  }
 
 }</style>
